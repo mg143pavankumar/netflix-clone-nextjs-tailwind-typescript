@@ -22,7 +22,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`${isScrolled} && bg-[#141414]`}>
+    <header className={`${isScrolled && 'bg-[#141414]'} `}>
       <div className="flex items-center space-x-2 md:space-x-10">
         <img
           src="https://rb.gy/ulxxee"
@@ -42,9 +42,11 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4 text-sm font-light">
-        <SearchIcon className="hidden h-6 w-6 sm:inline" />
-        <p className="hidden lg:inline">Kids</p>
-        <BellIcon className="h-6 w-6" />
+        <SearchIcon className="hidden h-6 w-6 cursor-pointer text-[#e5e5e5]  transition duration-[.4s] hover:text-[#b3b3b3] sm:inline" />
+        <p className="hidden cursor-pointer text-[#e5e5e5]  transition duration-[.4s] hover:text-[#b3b3b3] lg:inline">
+          Kids
+        </p>
+        <BellIcon className="h-6 w-6 cursor-pointer  text-[#e5e5e5] transition duration-[.4s] hover:text-[#b3b3b3]" />
 
         <Link href={`/account`}>
           <img
